@@ -1,0 +1,33 @@
+name: dblib
+description: dblib flutter client
+version: 1.0.0
+homepage: https://www.techknowledge.co.jp
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  xml: ^6.0.1
+  dio: ^4.0.4
+  dio_cookie_manager: ^2.0.0
+  cookie_jar: ^3.0.1
+  logger: ^1.1.0
+
+dependency_overrides:
+  collection: ^1.16.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
