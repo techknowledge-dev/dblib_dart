@@ -14,7 +14,11 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   dblib:
-    path: ../
+    git:
+      url: https://github.com/techknowledge-dev/dblib_dart.git
+
+#  dblib:
+#    path: ../
 
 dependency_overrides:
   collection: ^1.16.0

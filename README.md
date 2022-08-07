@@ -22,9 +22,9 @@ Perform database operations against oracle/SQL server.
 put dblib dependency to your pubspec.yaml.
 
 dependencies:
-  dblib:
-    git:
-      url: git://github.com/techknowledge-dev/dblib.git  
+  dblib: <br />
+    git: <br />
+      url: https://github.com/techknowledge-dev/dblib_dart.git
         
 ## Usage
 
