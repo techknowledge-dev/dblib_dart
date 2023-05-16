@@ -142,8 +142,7 @@ class DbLib {
   Future<StatusEnum> _requestNoParameterMethod(String methodName) async {
     try {
       var header = _buildHTTPHeader(methodName);
-      var msg = _soapRequestHeader + _soapRequestFooter;
-      print(msg);
+      var msg = _soapRequestHeader + "<"  + methodName + ' xmlns="http://tempuri.org/" />' + _soapRequestFooter;
       var response = await _dio.post(
         _strUrl,
         options: Options(headers: header),
