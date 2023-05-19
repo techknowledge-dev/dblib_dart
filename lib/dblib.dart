@@ -28,6 +28,12 @@ class DbLib {
   /// network time out in micro seconds
   int networkTimeout = 10000;
 
+  /// user id for authentication
+  String uid = "";
+
+  // password for user authentication
+  String pwd = "";
+
   /// last exception occurred
   dynamic lastException = null;
 
@@ -143,6 +149,7 @@ class DbLib {
     try {
       var header = _buildHTTPHeader(methodName);
       var msg = _soapRequestHeader + "<"  + methodName + ' xmlns="http://tempuri.org/" />' + _soapRequestFooter;
+      print(msg);
       var response = await _dio.post(
         _strUrl,
         options: Options(headers: header),
@@ -283,7 +290,7 @@ class DbLib {
 
       var header = _buildHTTPHeader("Login");
       String soapMsg = _soapRequestHeader +
-          '<Login xmlns="http://tempuri.org/"><udid>123456123456</udid><cns></cns></Login>' +
+          '<Login xmlns="http://tempuri.org/"><udid></udid><cns></cns><uid>$uid</uid><pwd>$pwd</pwd></Login>' +
           _soapRequestFooter;
       var response = await _dio.post(
         _strUrl,
